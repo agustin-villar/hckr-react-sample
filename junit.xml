@@ -1,0 +1,14 @@
+<testsuites name="jest tests" tests="5" failures="0" time="0.734">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2020-06-06T16:53:55" time="0.734" tests="5">
+    <testcase classname=" Navigation renders correctly" name=" Navigation renders correctly" time="0.085">
+    </testcase>
+    <testcase classname=" Initial articles render correctly" name=" Initial articles render correctly" time="0.01">
+    </testcase>
+    <testcase classname=" Clicking on top renders expected articles" name=" Clicking on top renders expected articles" time="0.015">
+    </testcase>
+    <testcase classname=" Clicking on newest renders expected articles" name=" Clicking on newest renders expected articles" time="0.009">
+    </testcase>
+    <testcase classname=" Sequence of navigation clicks renders expected artices" name=" Sequence of navigation clicks renders expected artices" time="0.024">
+    </testcase>
+  </testsuite>
+</testsuites>
