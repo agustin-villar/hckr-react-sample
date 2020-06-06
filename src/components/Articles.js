@@ -1,33 +1,29 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-class Articles extends React.Component {
+const Articles = ({ articles }) => (
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Upvotes</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      {articles.map(({ title, upvotes, date }) => (
+        <tr data-testid="article" key={title}>
+          <td data-testid="article-title">{title}</td>
+          <td data-testid="article-upvotes">{upvotes}</td>
+          <td data-testid="article-date">{date}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+);
 
-  render() {
-    
-    return (
-      <table>
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Upvotes</th>
-            <th>Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr data-testid="article">
-            <td data-testid="article-title">Article 1 title</td>
-            <td data-testid="article-upvotes">Article 1 title</td>
-            <td data-testid="article-date">Article 1 title</td>
-          </tr>
-          <tr data-testid="article">
-            <td data-testid="article-title">Article 2 title</td>
-            <td data-testid="article-upvotes">Article 2 title</td>
-            <td data-testid="article-date">Article 2 title</td>
-          </tr>
-        </tbody>
-      </table>
-    );
-  }
+Articles.propTypes = {
+  articles: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 }
 
 export default Articles;
